@@ -7,7 +7,7 @@
 </head>
 <body style="display: flex; justify-content: center; align-items: center; height: 100lvh;">
     <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center;">
-        <textarea id="input" style="width: min(50rem, 95vw); font-size: 1.3em;" rows="10" cols="100" placeholder="Скопируйте задание"></textarea>
+        <textarea id="input" style="width: min(50rem, 95vw); font-size: 1.3em;" rows="10" cols="100" placeholder="Скопируйте задание ПОЛНОСТЬЮ, как на изображении"></textarea>
         <br>
         <button onclick="processInput()" style="height: 3rem; width: 7rem; font-size: 1.5em;">Решить!</button>
 
@@ -16,7 +16,7 @@
                 let input = document.getElementById("input").value.trim().toLowerCase();
                 if (input) {
                     // Remove punctuation
-                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()ьъ─]/g, "");
+                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\_`~()ьъ─]/g, "");
                     
                     // Replace whitespace with '-'
                     processedInput = processedInput.replace(/\s+/g, "-");
