@@ -18,7 +18,7 @@
                 let input = document.getElementById("input").value.trim().toLowerCase();
                 if (input) {
                     // Remove punctuation
-                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\_`~()ьъ─"]/g, "");
+                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\_`~()ьъ─"«»]/g, "");
                     
                     // Replace whitespace with '-'
                     processedInput = processedInput.replace(/\s+/g, "-");
