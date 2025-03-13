@@ -7,10 +7,10 @@
 </head>
 <body style="display: flex; justify-content: center; align-items: center; height: 100lvh;">
     <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center;">
-        <img src="static/ref.jpg" style="width: 35rem;" alt="Копируйте ВСЁ содержимое задания, без номера задания и подобного шлака">
+        <img src="static/ref.jpg" style="width: 35rem; filter: brightness(0.97);" alt="Копируйте ВСЁ содержимое задания, без номера задания и подобного шлака">
         <textarea id="input" style="width: min(50rem, 95vw); font-size: 1.3em;" rows="10" cols="100" placeholder="Скопируйте задание ПОЛНОСТЬЮ, как на изображении"></textarea>
         <br>
-        <button onclick="processInput()" style="height: 3rem; width: 7rem; font-size: 1.5em;">Решить!</button>
+        <button onclick="processInput()" style="padding: 0.7rem; font-size: 1.5em;">Решить!</button>
         <h3><a href="https://chromewebstore.google.com/detail/simple-allow-copy/aefehdhdciieocakfobpaaolhipkcpgc" style="color: rgb(0, 169, 169);">Как выделить текст</a></h3>
         
         <script>
@@ -18,7 +18,7 @@
                 let input = document.getElementById("input").value.trim().toLowerCase();
                 if (input) {
                     // Remove punctuation
-                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\_`~()ьъ─]/g, "");
+                    let processedInput = input.replace(/[.,\/#!?$%\^&\*;:{}=\_`~()ьъ─]"/g, "");
                     
                     // Replace whitespace with '-'
                     processedInput = processedInput.replace(/\s+/g, "-");
